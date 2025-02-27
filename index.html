@@ -80,6 +80,13 @@
 
         // Button control
         pauseBtn.addEventListener("click", togglePause);
+        // Spacebar pause functionality
+        document.addEventListener("keydown", function(event) {
+        if (event.code === "Space") {
+        event.preventDefault(); // Prevents accidental page scrolling
+        togglePause();
+            }
+        });
 
         document.addEventListener("keydown", changeDirection);
 
